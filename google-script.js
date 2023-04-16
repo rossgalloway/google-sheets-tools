@@ -1,4 +1,9 @@
 // This script should be imported into google scripts
+function onOpen() {
+  var ui = SpreadsheetApp.getUi()
+  ui.createMenu('CoinGecko').addItem('Import Prices', 'importPrices').addToUi()
+}
+
 function importPrices() {
   var sheet = SpreadsheetApp.getActiveSheet()
 
@@ -28,3 +33,4 @@ function importPrices() {
     i++
   }
 }
+
